@@ -5,7 +5,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Piccoli Momenti</title>
+
+  <!-- Carica il CSS correttamente -->
   style.css
+
+  <!-- Carica il JS correttamente (defer per aspettare il DOM) -->
+  script.js</script>
 </head>
 <body>
   <main>
@@ -16,9 +21,12 @@
 
     <section class="gallery">
       <button id="prev" aria-label="Foto precedente">←</button>
+
       <div class="frame">
+        <!-- QUI deve esserci un <img>, non testo -->
         images/1.jpg
       </div>
+
       <button id="next" aria-label="Foto successiva">→</button>
     </section>
 
@@ -31,6 +39,4 @@
       <small>Per voi, con amicizia 💙</small>
     </footer>
   </main>
-
-   script.js</script>
 </body>
