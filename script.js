@@ -47,16 +47,34 @@ function showPhoto(i){
 
 function randomQuote(){
   if (!quotes.length || !quoteEl) return;
+
   const q = quotes[Math.floor(Math.random() * quotes.length)];
-  quoteEl.textContent = q;
+
+  // fade-out
+  quoteEl.classList.add("is-fading");
+
+  setTimeout(() => {
+    quoteEl.textContent = q;
+    // fade-in
+    quoteEl.classList.remove("is-fading");
+  }, 180);
 }
+
 
 function quoteOfTheDay(){
   if (!quotes.length || !quoteEl) return;
+
   const d = new Date();
   const seed = d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
-  quoteEl.textContent = quotes[seed % quotes.length];
+  const q = quotes[seed % quotes.length];
+
+  quoteEl.classList.add("is-fading");
+  setTimeout(() => {
+    quoteEl.textContent = q;
+    quoteEl.classList.remove("is-fading");
+  }, 180);
 }
+
 
 // --- Eventi ---
 prevBtn?.addEventListener("click", ()=>{ idx = (idx - 1 + photos.length) % photos.length; showPhoto(idx); });

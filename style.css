@@ -24,7 +24,16 @@ h1{margin:8px 0 4px; font-weight:700}
 .frame img{width:100%; height:100%; object-fit:cover; transition:opacity .35s ease;}
 
 .quote{margin-top:18px; background:var(--card); border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.10); padding:20px; text-align:center;}
-blockquote{font-size:1.1rem; line-height:1.5; margin:0 0 12px;}
+
+blockquote {
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+blockquote.is-fading {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
 #newQuote{border:none; border-radius:12px; padding:10px 16px; background:var(--accent); color:white; font-weight:600; cursor:pointer;}
 #newQuote:active{transform:scale(.98)}
 footer{margin-top:12px;}

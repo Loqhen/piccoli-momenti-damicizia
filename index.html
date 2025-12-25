@@ -2,16 +2,16 @@
 <!doctype html>
 <html lang="it">
 <head>
+  <p class="subtitle">Per IGV</p>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Piccoli Momenti</title>
 
   <!-- Carica il CSS correttamente -->
-  style.css
+  <link rel="stylesheet" href="style.css">
 
   <!-- Carica il JS correttamente (defer per aspettare il DOM) -->
-  script.js</script>
-</head>
+ <script src="script.js" defer></script>
 <body>
   <main>
     <header>
@@ -24,7 +24,7 @@
 
       <div class="frame">
         <!-- QUI deve esserci un <img>, non testo -->
-        images/1.jpg
+        <img id="photo" alt="Foto ricordo">
       </div>
 
       <button id="next" aria-label="Foto successiva">→</button>
